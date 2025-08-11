@@ -21,7 +21,7 @@ This repository provides scripts for:
 
 Protein structures were generated on an HPC cluster using ParaFold in two steps:
 
-1. Multiple Sequence Alignment (MSA) and Feature Generation (CPU-only stage:
+1. Multiple Sequence Alignment (MSA) and Feature Generation (CPU-only stage):
 ```bash
 DeltaMut_Database/HPC_Pipeline/parafold_cpu_komondor.sh
 ```
@@ -35,7 +35,7 @@ DeltaMut_Database/HPC_Pipeline/parafold_gpu_komondor.sh
 ---
 📂 ARP Repository Structure Description
 
-All data present in the DeltaMut database and intermediate AlphaFold2 output files are stored in the **DeltaMut-Database** directory in the ARP Research Data Repository, which is maintained by the HUN-REN network for long-term accessibility and preservation. ARP utilizes *Dataverses*, structured digital containers that organized datasets and metadata in a user-friendly and searchable way, allowing independent access to individual files without the need to navigate through multiple datasets. *Please see the following guide to familiarize yourself with Dataverses: https://dataverse.org/*.
+All data present in the DeltaMut database and intermediate AlphaFold2 output files are stored in the **DeltaMut-Database** directory in the ARP Research Data Repository, which is maintained by the HUN-REN network for long-term accessibility and preservation. ARP utilizes *Dataverses*, structured digital containers that organize datasets and metadata in a user-friendly and searchable way, allowing independent access to individual files without the need to navigate through multiple datasets. *Please see the following guide to familiarize yourself with Dataverses: https://dataverse.org/*.
 
 The DeltaMut_Database directory is organized as follows:
 - 12,342 dataverses - Each dataverse corresponds to one protein and includes all its related missense variants.
@@ -71,7 +71,7 @@ DeltaMut_Database/ARP_Download_Files/private_urls.tsv
 ```
 Use the following one-liner commands to retrieve data from these URLs:
 
-> **Important:** Accessing these URLs while the DeltaMut dataverse is in private mode required an authorized *API_TOKEN*, which must be requested from the dataset maintainers prior to dataverse publication.
+> **Important:** Accessing these URLs while the DeltaMut dataverse is in private mode requires an authorized *API_TOKEN*, which must be requested from the dataset maintainers prior to dataverse publication.
 
 ```bash
 # Download ten random datasets
