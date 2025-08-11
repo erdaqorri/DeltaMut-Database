@@ -4,6 +4,7 @@ This repository contains scripts and instructions to generate and retrieve Alpha
 # DeltaMut Overview
 The DeltaMut database contains high-quality protein structures generated with ParaFold, an HPC-friendly implementation of AlphaFold2. The collection consists of both wild-type and variant protein structures from a curated set of missense variants retrieved from Humsavar.
 
+
 📦 Repository Contents
 
 This repository provides scripts for:
@@ -30,6 +31,8 @@ DeltaMut_Database/HPC_Pipeline/parafold_gpu_komondor.sh
 
 > **Technical Information:** For the technical details on how to install ParaFold please refer to the following GitHub repository: https://github.com/Zuricho/ParallelFold and for information on how ParaFold is implemented, see the refereced research paper: ParaFold doi.org/10.1145/3503470.3503471*
 
+
+
 📂 ARP Repository Structure Description
 
 All data present in the DeltaMut database and intermediate AlphaFold2 output files are stored in the **DeltaMut-Database** directory in the ARP Research Data Repository, which is maintained by the HUN-REN network for long-term accessibility and preservation. ARP utilizes *Dataverses*, structured digital containers that organized datasets and metadata in a user-friendly and searchable way, allowing independent access to individual files without the need to navigate through multiple datasets. *Please see the following guide to familiarize yourself with Dataverses: https://dataverse.org/*.
@@ -43,6 +46,8 @@ The DeltaMut_Database directory is organized as follows:
   - Detailed descriptions explaining the contents of each file.
     
 - 1,507,487 individual files - Every file is independently accessible and searchable, facilitating direct retrieval without browsing multiple datasets.
+
+
 
 
 📥 Downloading Data from the ARP Repository
