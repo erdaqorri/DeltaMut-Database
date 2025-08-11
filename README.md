@@ -25,7 +25,7 @@ DeltaMut_Database/HPC_Pipeline/parafold_cpu_komondor.sh
 ```bash
 DeltaMut_Database/HPC_Pipeline/parafold_gpu_komondor.sh
 ```
-*For the technical details on how to install ParaFold please refer to the following GitHub repository: https://github.com/Zuricho/ParallelFold and for information on how ParaFold is implemented, see the refereced research paper: ParaFold doi.org/10.1145/3503470.3503471*
+> **Technical Information:** For the technical details on how to install ParaFold please refer to the following GitHub repository: https://github.com/Zuricho/ParallelFold and for information on how ParaFold is implemented, see the refereced research paper: ParaFold doi.org/10.1145/3503470.3503471*
 
 📂 ARP Repository Structure Description
 All data present in the DeltaMut database and intermediate AlphaFold2 output files are stored in the **DeltaMut-Database** directory in the ARP Research Data Repository, which is maintained by the HUN-REN network for long-term accessibility and preservation. ARP utilizes *Dataverses*, structured digital containers that organized datasets and metadata in a user-friendly and searchable way, allowing independent access to individual files without the need to navigate through multiple datasets. *Please see the following guide to familiarize yourself with Dataverses: https://dataverse.org/*.
@@ -51,7 +51,7 @@ bash DeltaMut_Database/ARP_Download_Files/download.sh
 ```
 
 ## Accessing Data via Private URLs (Repository in Private Mode)
-> **Important:** Applicable only during the DeltaMut Database submission and review process**
+> **Technical Note:** Applicable only during the DeltaMut Database submission and review process.
 
 While the DeltaMut repository is in private mode, the data can be accessed through private URLs listed in the file:
 ```text
@@ -68,4 +68,4 @@ cat private_urls.tsv | cut -f3 | shuf | head | xargs bash DeltaMut_Database/ARP_
 cat private_urls.tsv | xargs bash DeltaMut_Database/ARP_Download_Files/download_private.sh
 ```
 
-**⚠️ Caution: The full dataset size exceed 60 TB. Please ensure you have sufficient storage capacity and bandwidth before downloading. For large-scale download plans and any questions, contact Erda Qorri at erda.qorri@brc.hu**
+> **⚠️ Caution:** The full dataset size exceed 60 TB. Please ensure you have sufficient storage capacity and bandwidth before downloading. For large-scale download plans and any questions, contact Erda Qorri at erda.qorri@brc.hu
