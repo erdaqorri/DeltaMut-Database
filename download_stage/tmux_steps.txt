@@ -1,0 +1,39 @@
+### STAGE ONE: Install and set up the tmux env
+
+1. Install the tmux
+  sudo apt install tmux
+
+2. Start a named station
+  tmux new -s download
+
+3. Move into the right dir and activate the virtual env
+  cd /exports/st18
+  source ~/DeltaMut-Database/ARP_Download_Files/DataverseMassUploader/.venv/bin/activate
+
+4. Proxy issue fix
+  env | grep -i proxy
+
+5. Re-export the same host and port with http:// instead of https://:
+  export https_proxy=http://host:port
+  export HTTPS_PROXY=http://host:port
+
+6. Verify the working dir and the available space before continuing
+  pwd
+  df -h .
+  curl -sS -m 20 https://repo.researchdata.hu | head -c 100; echo
+
+7. Star the download with a log file
+  cut -f3 private_urls.tsv | xargs -n1 bash download_private.sh 2>&1 | tee -a download.log
+
+### STAGE TWO: Check the downloading
+
+1. Detach and let it run
+  Press Ctrl+B, then D. You're back to a normal prompt, and the download keeps running in the background, surviving disconnects.
+
+2. Check the downloading at anytime: Reconnect to the VM (from a new SSH connection, or the same one later), then:
+
+  tmux attach -t download
+  tmux ls
+  tail -f /exports/st18/download.log
+  df -h /exports/st18
+  find /exports/st18 -name .done | wc -l
